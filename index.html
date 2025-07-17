@@ -3,8 +3,82 @@
     <head>
         <meta charset="UTF-8">
         <title>English 2 Portfolio</title>
+
+        <!-- React + ReactDOM CDN -->
+        <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+        <!-- Babel for JSX support -->
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     </head>
-    <body>
-        <p>Portfolio</p>
+    <body style="margin: 0; padding-bottom:20px;">
+        <!-- Header -->
+        <div style="background-image:url(images/title.png); background-repeat:no-repeat; background-size:cover; background-position:center; margin-bottom: 20px; padding: 30px 20px;">
+            <h1 style="text-shadow:0 0 10px #FFFFFF; font-family:Tahoma, sans-serif; font-size:40px;">English 2 Portfolio</h1>
+            <h3 style="text-shadow:0 0 10px #FFFFFF; font-family:Tahoma, sans-serif; font-size:25px;">Jacob Lamp</h3>
+        </div>
+        
+        <div id="root"></div>
+
+        <style> #tile:hover {background-color: #FF69C5 !important;} </style>
+        <script type="text/babel">
+            function Tile({title, assignmentName}) {
+                return (
+                    <a href={"assignment.html?assignment-name=" + assignmentName} style={{textDecoration:"none", color:"#000000"}}>
+                        <div style={{
+                            width: "200px",
+                            height: "200px",
+                            borderRadius: "8px",
+                            display: "flex",
+                            flexDirection: "column",
+                            overflow: "hidden",
+                            boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)"
+                        }}>
+                            <div style={{overflow:"hidden", height:"80%"}}>
+                                <img src={"images/" + assignmentName + ".png"} style={{width:"100%", height:"100%", objectFit:"cover"}} />
+                            </div>
+                            <span style={{height:"20%", display:"flex", justifyContent:"center", alignItems:"center", fontFamily:"Tahoma, sans-serif", fontSize:"20px", margin:"10px"}}>{title}</span>
+                        </div>
+                    </a>
+                );
+            }
+
+            function Section({name, children}) {
+                return (
+                    <div style={{marginLeft:"20px"}}>
+                        <h1>{name}</h1>
+                        <div style={{display:"flex", gap:"20px", flexWrap:"wrap"}}>
+                            {children}
+                        </div>
+                    </div>
+                );
+            }
+
+            function App() {
+                return (
+                    <>
+                        <Section name="Reading Responses">
+                            <Tile title="Reading Response 1" assignmentName="reading-response-1"/>
+                            <Tile title="Reading Response 2" assignmentName="reading-response-2"/>
+                        </Section>
+                        <Section name="Topic Proposal">
+                            <Tile title="Brainstorm" assignmentName="task-1-brainstorm"/>
+                            <Tile title="Topic Proposal" assignmentName="task-1"/>
+                            <Tile title="Reflection" assignmentName="task-1-reflection"/>
+                        
+                        </Section>
+                        <Section name="Research Project">
+                            <Tile title="Task 2 Samples" assignmentName="task-2-samples"/>
+                            <Tile title="Task 2" assignmentName="task-2"/>
+                        </Section>
+                        <Section name="Remediation">
+
+                        </Section>
+                    </>
+                );
+            }
+
+            const root = ReactDOM.createRoot(document.getElementById("root"));
+            root.render(<App />);
+        </script>
     </body>
 </html>
