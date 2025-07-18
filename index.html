@@ -33,10 +33,10 @@
                             overflow: "hidden",
                             boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)"
                         }}>
-                            <div style={{overflow:"hidden", height:"80%"}}>
+                            <div style={{overflow:"hidden", height:"160px"}}>
                                 <img src={"images/" + assignmentName + ".png"} style={{width:"100%", height:"100%", objectFit:"cover"}} />
                             </div>
-                            <span style={{height:"20%", display:"flex", justifyContent:"center", alignItems:"center", fontFamily:"Tahoma, sans-serif", fontSize:"20px", margin:"10px"}}>{title}</span>
+                            <span style={{height:"40px", fontFamily:"Tahoma, sans-serif", margin:"5px", textAlign:"center", verticalAlign:"middle", lineHeight:"40px"}}>{title}</span>
                         </div>
                     </a>
                 );
@@ -57,9 +57,9 @@
                 return (
                     <>
                         <Section name="Reading Responses">
-                            <Tile title="Reading Response 1" assignmentName="reading-response-1"/>
-                            <Tile title="Reading Response 2" assignmentName="reading-response-2"/>
-                            <Tile title="Reading Response 3" assignmentName="reading-response-3"/>
+                            <Tile title="Research Communities" assignmentName="reading-response-1"/>
+                            <Tile title="CRAAP Test" assignmentName="reading-response-2"/>
+                            <Tile title="The Revision Plan" assignmentName="reading-response-3"/>
                         </Section>
                         <Section name="Topic Proposal">
                             <Tile title="Brainstorm" assignmentName="task-1-brainstorm"/>
@@ -68,11 +68,8 @@
                         
                         </Section>
                         <Section name="Research Project">
-                            <Tile title="Task 2 Samples" assignmentName="task-2-samples"/>
-                            <Tile title="Task 2" assignmentName="task-2"/>
-                        </Section>
-                        <Section name="Remediation">
-
+                            <Tile title="Project Samples" assignmentName="task-2-samples"/>
+                            <Tile title="Research Project" assignmentName="task-2"/>
                         </Section>
                     </>
                 );
