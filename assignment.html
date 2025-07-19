@@ -13,26 +13,14 @@
         </div>
 
         <!-- Content -->
-        <iframe id="assignment-iframe" style="width:850px; height:1100px; margin:20px;"></iframe>
+        <iframe id="assignment-iframe" width="850" height="1100" style="margin:20px; border:1px solid #000000"></iframe>
         <script>
-            // Get assignment name as url parameter
+            // Get assignment name from url parameter
             const params = new URLSearchParams(window.location.search);
             const assignmentName = params.get("assignment-name");
 
-            // Map of assignment name to embed link
-            const nameToLink = {
-                "reading-response-1": "https://docs.google.com/document/d/e/2PACX-1vR7SUaoHHRi1Tmbv9XcX0OUgdagE46-PNOTTal5t7KdFDTzjlsGvqEdR7XsM8m0JQ7ndug_t1Bz0tKv/pub?embedded=true",
-                "reading-response-2": "https://docs.google.com/document/d/e/2PACX-1vRfkc_6CvEsTUYTLeO94n5Pf57WoHFZFEH9gb2Fd92qRiq_pgEENsApI0P9yrrU3sDNnY0-jzeq2Qti/pub?embedded=true",
-                "reading-response-3": "https://docs.google.com/document/d/e/2PACX-1vRGb5LziFt3JZs4WKkda1OoYJAWx95Zooe5mnNfhYQy6lh7mKFPOIp9vX82V-EnU4nVmbQJWSShFDtu/pub?embedded=true",
-                "task-1-brainstorm": "https://docs.google.com/document/d/e/2PACX-1vR6ZZc_mBfARd9dRVLjTuuUq44iZ_6PRx72eWT-C6Wh_oVBhGoLKRf-6UuwYuq6u9GMB_csJ4UL6ixv/pub?embedded=true",
-                "task-1": "https://docs.google.com/document/d/e/2PACX-1vT39uKvJz_-0GApGs80_dA2zNgVIUSY_gFhe7fL-evrI4L4AyR5ODG-ex-g3d0y_8wtfMjTum6qbaBK/pub?embedded=true",
-                "task-1-reflection": "https://docs.google.com/document/d/e/2PACX-1vSwJVeWuL0AMfk73k4UO7tZIf19FsvnXdIU1srlxQ0oygd-1L13QjHunUbRIy89J9rb01I9VPfnbcXR/pub?embedded=true",
-                "task-2-samples": "https://docs.google.com/document/d/e/2PACX-1vR_GH5uaYZoCIJnnSvcEIuUXuscp-yaj422sgX_64YUP5ryeCMOv2VPoyqvZkLpTrr6PmEgpf9ysEtB/pub?embedded=true",
-                "task-2": "https://docs.google.com/document/d/e/2PACX-1vRBQ0LaEieaR4JWcsz84cJes1oYVukuDyXOMtLFlR_-YVFhtN7l-Sh0Tp2dbQm8D_O02M01-OuINdp0/pub?embedded=true"
-            };
-
             // Set iframe link
-            document.getElementById("assignment-iframe").src = nameToLink[assignmentName];
+            document.getElementById("assignment-iframe").src = "assignments/" + assignmentName + ".pdf#toolbar=0&view=FitH";
         </script>
     </body>
 </html>
