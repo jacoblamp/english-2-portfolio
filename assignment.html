@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="height:100%;">
     <head>
         <meta charset="UTF-8">
         <title>English 2 Portfolio</title>
     </head>
-    <body style="margin: 0">
+    <body style="margin:0; height:100%; display:flex; flex-direction:column;">
         <!-- Header -->
         <div style="display:flex; background-color:#FFADF0;">
             <style> #home-button:hover {background-color: #FF69C5 !important;} </style>
@@ -13,7 +13,7 @@
         </div>
 
         <!-- Content -->
-        <iframe id="assignment-iframe" width="850" height="1100" style="margin:20px; border:1px solid #000000"></iframe>
+        <iframe id="assignment-iframe" style="width:850px; max-width:calc(100%-40px); height:100%; margin:20px; border:1px solid #000000"></iframe>
         <script>
             // Get assignment name from url parameter
             const params = new URLSearchParams(window.location.search);
