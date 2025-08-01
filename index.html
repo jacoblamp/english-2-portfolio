@@ -44,18 +44,18 @@
 
             function Section({name, children}) {
                 return (
-                    <div style={{marginLeft:"20px"}}>
+                    <>
                         <h1>{name}</h1>
                         <div style={{display:"flex", gap:"20px", flexWrap:"wrap"}}>
                             {children}
                         </div>
-                    </div>
+                    </>
                 );
             }
 
             function App() {
                 return (
-                    <>
+                    <div style={{marginLeft:"20px"}}>
                         <Section name="Reading Responses">
                             <Tile title="Research Communities" assignmentName="reading-response-1"/>
                             <Tile title="CRAAP Test" assignmentName="reading-response-2"/>
@@ -77,7 +77,23 @@
                             <Tile title="Remediation Draft" assignmentName="task-3-v1"/>
                             <Tile title="Remediation" assignmentName="task-3-v2"/>
                         </Section>
-                    </>
+                        <div style={{"width":"500px"}}>
+                            <h1>Learning Outcomes</h1>
+                            <p></p>
+                            <h2>Generating Inquiry</h2>
+                            <p>I found myself generating inquiry at times when I had questions about the writing process. I often search for answers to my questions online, and this helps me to learn things very quickly. As soon as I generate a question, I can find answers within seconds thanks to the internet.</p>
+                            <h2>Multiple ways of writing</h2>
+                            <p>I did not integrate multimodality in my early assignments, but I began using it in my research project and remediation. I included a helpful flowchart to show my research plan in my research project. This would be useful for people who are skimming my project, or if they have any confusion about the research setup. I also used many pictures in my remediation because I chose to create a slideshow. The pictures help to make the project feel more real, by helping the audience to visualize the content.</p>
+                            <h2>Information Literacy</h2>
+                            <p>I used the CRAAP test to evaluate the credibility of sources. I did not run into many sources that had significant credibility issues. I also chose a topic that has no obvious biases involved. Even though I considered the education level of my chosen authors, I believe that there are other factors more important than education. Some sources can still be valuable if they are created by an uneducated author because they may offer a unique perspective.</p>
+                            <h2>Research Genre Production</h2>
+                            <p>My research project was an example of writing with a constraint in place. I had to write this assignment under an academic tone. This means that my writing should generally be more short and concise, particularly in the research plan section. I also included a flowchart, which is fitting for the academic tone. Typically these articles are skimmed before being read, so a flowchart can aid in the skimming process.</p>
+                            <h2>Contributing Knowledge</h2>
+                            <p>I have analyzed primary sources in my research project. One primary source included interview responses which I drew conclusions about. I have also analyzed various other primary sources in other assignments, and I considered the credibility of each source.</p>
+                            <h2>Revision</h2>
+                            <p>I have demonstrated this learning outcome by revising my research project and my remediation. I have used the help of my peer reviews to make my revisions. I realize that revision is a very powerful tool. Typically a first draft will have many flaws, so it is necessary to gather opinions from other people.</p>
+                        </div>
+                    </div>
                 );
             }
 
